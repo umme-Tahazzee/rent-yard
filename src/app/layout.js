@@ -29,9 +29,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={fustat.className} >
       <body>
-         <Navbar/>
         {children}
-        <Footer/>
       </body>
     </html>
   );

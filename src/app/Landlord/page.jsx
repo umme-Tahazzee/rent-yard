@@ -10,10 +10,11 @@ const page = () => {
    <div className='p-5'>
      <h5 className='text-[#272B35] text-[16px] font-semibold p-2' >Ownership doc*</h5>
     <label
-        htmlFor="ownershipDoc"
-        className="flex w-[20%] items-center justify-center gap-2 cursor-pointer border-1
-         border-gray-400 rounded-lg bg-[#E0E0E0] px-4 py-3 border-dashed
-          text-gray-500 hover:border-gray-600 transition-colors"
+       
+        className="w-full md:w-[20%] flex items-center justify-center gap-2 
+             cursor-pointer border border-gray-400 rounded-lg bg-[#E0E0E0] 
+             px-4 py-3 border-dashed text-gray-500 hover:border-gray-600 
+             transition-colors text-sm text-center"
       >
         <AiOutlineUpload size={20} />
         <span className="text-sm">(Pdf only)</span>
