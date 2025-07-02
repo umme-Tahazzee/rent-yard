@@ -66,12 +66,14 @@ const Home = () => {
   };
 
   return (
-    <main className=" lg:h-[650px] bg-white font-sans text-gray-900 px-6 md:px-20 py-10">
+    <main className=" lg:h-[650px] bg-white font-sans text-gray-900 
+    page-wrapper py-10">
       <section className="space-y-10">
 
         {/* Property type */}
         <div>
-          <h2 className="text-lg font-semibold mb-4">Property type</h2>
+          <h2 className="text-2xl font-semibold mb-4 leading-[100%]
+           tracking-normal">Property type</h2>
           <div className="grid md:grid-cols-3 gap-4">
             {propertyTypes.map(({ title, description, icon, link }, i) => (
               <div
@@ -94,7 +96,8 @@ const Home = () => {
 
         {/* Select your role */}
         <div>
-          <h2 className="text-lg font-semibold mb-4">Select your role</h2>
+          <h2 className="text-2xl font-semibold mb-4 leading-[100%]
+           tracking-normal">Select your role</h2>
           <div className="grid md:grid-cols-3 gap-4">
             {roles.map(({ title, description, icon }, i) => (
               <div
