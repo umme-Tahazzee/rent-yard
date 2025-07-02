@@ -1,6 +1,7 @@
 import { Fustat, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from './../components/Navbar';
+import { Footer } from './../components/Footer';
 
 
 const fustat = Fustat({
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
       <body>
          <Navbar/>
         {children}
+        <Footer/>
       </body>
     </html>
   );

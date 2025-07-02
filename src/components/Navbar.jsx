@@ -5,8 +5,8 @@ import logo from '../../public/assests/logo.png'
 
 const Navbar = () => {
   return (
-<div className="navbar bg-base-100 shadow-sm p-5">
-  <div className="flex-1 pl-10 ">
+<div className="navbar bg-base-100 shadow-sm page-wrapper">
+  <div className="flex-1  ">
   <Image
   src= {logo}
   alt="logo"
@@ -15,10 +15,10 @@ const Navbar = () => {
   className="rounded-lg"
 />
   </div>
-  <div className="flex-none pr-10 ">
+  <div className="flex-none ">
     <button className="btn btn-ghost outline-1
-     outline-neutral-500 px-4 py-2 font-fustat ">
-       Exit
+     outline-neutral-500 px-4 py-2 ">
+        Exit
     </button>
   </div>
 </div>

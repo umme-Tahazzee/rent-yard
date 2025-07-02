@@ -2,9 +2,13 @@
 @plugin "daisyui";
 
 
-/* globals.css or app/globals.css */
+
 
 .page-wrapper {
-  @apply px-4 sm:px-6 md:px-10 lg:px-20 py-10 sm:py-16;
+  @apply px-4 sm:px-6 md:px-10 lg:px-20;
 }
 
+
+.button {
+  @apply  text-white px-6 py-2 rounded-[12px] text-sm  cursor-pointer bg-[#316EED]
+}
