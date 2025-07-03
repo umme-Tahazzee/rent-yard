@@ -10,6 +10,7 @@ import { AiOutlinePropertySafety } from "react-icons/ai";
 import Landloard from '@/app/Landlord/page'
 import Realtor from '@/app/Realtor/page'
 import Property from '@/app/Property/page'
+import Footer from './Footer';
 
 const propertyTypes = [
  {
@@ -49,6 +50,8 @@ const roles = [
 ];
 
 const Home = () => {
+
+
  const [selectedRole, setSelectedRole] = useState('');
  const router = useRouter();
  const renderComponent = () => {
@@ -68,9 +71,9 @@ const Home = () => {
  const [selectedPropertyType, setSelectedPropertyType] = useState('');
 
  return (
-  <main className="max-h-screen  bg-white font-sans text-gray-900 
+  <main className="max-h-screen  bg-white text-gray-900 
     page-wrapper py-10">
-   <section className="space-y-10 lg:h-[550px] ">
+   <section className="space-y-10">
 
     {/* Property type */}
     <div>
@@ -87,6 +90,7 @@ const Home = () => {
          setSelectedPropertyType(title);
         }}
        >
+
         <div className='text-2xl mt-1'>{icon}</div>
         <div>
          <h3 className="font-medium text-sm mb-1">{title}</h3>
@@ -136,7 +140,7 @@ const Home = () => {
    </section>
 
    {/* footer start  */}
-   <footer className="  flex justify-between items-center mt-20 mb-10 ">
+   {/* <footer className=" p-5 flex justify-between items-center mt-20 mb-10 ">
     <button className="text-sm text-gray-600 underline cursor-pointer ">Back</button>
     <button
      className={`text-white px-6 py-2 rounded-[12px] text-sm
@@ -147,7 +151,14 @@ const Home = () => {
     >
      Get started
     </button>
-   </footer>
+   </footer> */}
+
+   <Footer
+  title='Back'
+  btn = 'Get Started'
+  isNextEnabled={selectedRole && selectedPropertyType}
+  />
+
   </main>
  );
 };
