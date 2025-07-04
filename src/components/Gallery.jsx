@@ -1,6 +1,7 @@
 'use client'
 
 import { FiUpload } from "react-icons/fi";
+import { FaCircleChevronDown } from "react-icons/fa6";
 
 const Gallery = () => {
   return (
@@ -20,7 +21,8 @@ const Gallery = () => {
    
                    {/* Upload Cover Photo */}
                    <div className="w-full md:w-72 h-48 flex flex-col items-center justify-center border-2 border-dashed
-                 border-[#316EED] rounded-lg cursor-pointer bg-gray-50 text-[#272B35] text-[16px] font-bold
+                 border-[#316EED] rounded-lg cursor-pointer bg-gray-50
+                  text-[#272B35] text-[16px] font-bold
                    text-center px-4">
    
                      <div className="border border-[#316EED] border-dashed p-2 rounded-md mb-3">
@@ -41,17 +43,24 @@ const Gallery = () => {
                        {Array.from({ length: 4 }).map((_, index) => (
                          <div key={`first-col-${index}`} className="w-24 h-24 border-2 border-dashed border-gray-300
                         rounded-lg flex items-center justify-center text-gray-400 text-xl">
-                           +
+                         
+                       <div className="border border-[#316EED] border-dashed p-2 rounded-md mb-3">
+                       <FiUpload className="text-xl text-[#272B35] size-4" />
+                     </div>
+
                          </div>
                        ))}
                      </div>
    
                      {/* Second Column (4x2 grid) */}
-                     <div className="grid grid-cols-4 gap-2 md:pl-5 ">
+                     <div className="grid grid-cols-2  md:grid-cols-4 lg:grid-cols-4
+                      gap-2 md:pl-5 ">
                        {Array.from({ length: 8 }).map((_, index) => (
                          <div key={`second-col-${index}`} className="w-24 h-24 border-2 border-dashed border-gray-300
                        rounded-lg flex items-center justify-center text-gray-400 text-xl">
-                           +
+                          <div className="border border-[#316EED] border-dashed p-2 rounded-md mb-3">
+                       <FiUpload className="text-xl text-[#272B35] size-4" />
+                     </div>
                          </div>
                        ))}
                      </div>
@@ -63,10 +72,13 @@ const Gallery = () => {
              </div>
    
              <div className='p-5'>
-               <div className="w-full h-16 border-1  border-gray-300 rounded-lg flex text-xl">
-               <label className="text-md font-semibold mb-1 block p-3">Videos
-                  <span className="text-gray-400">(optional)</span></label>
-   
+               <div className="w-full  flex justify-between h-16 border-1 
+                border-gray-300 rounded-lg  text-xl">
+               <div className="text-md font-semibold mb-1 block p-3">Videos
+                  <span className="text-gray-400">(optional)</span></div>
+                 <div className="p-5 cursor-pointer  " >
+                   <FaCircleChevronDown className="size-6  "/>
+                 </div>
                 </div>
              </div>
    

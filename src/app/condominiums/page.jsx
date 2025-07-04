@@ -9,6 +9,15 @@ import Gallery from './../../components/Gallery';
 import Leasing from './../../components/Leasing';
 import Charges from './../../components/Charges';
 import Rentfrequency from './../../components/Rentfrequency';
+import ApplicationAgreement from './../../components/ApplicationAgreement';
+import AboutProperty from '@/components/AboutProperty';
+import AmenitiesSelector from '@/components/AmenitiesSelector';
+import PetFees from '@/components/PetFees';
+
+import Parking from './../../components/Parking';
+import NearestEducational from '@/components/NearestEducational';
+import AddLandmark from '@/components/AddLandmark';
+import UtilitiesProvider from '@/components/UtilitiesProvider';
 
 const Condominiums = [
   {
@@ -146,6 +155,32 @@ const Page = () => {
         <Leasing open={openModal==='Leasing info'} onClose={handleCloseModal} title={selectTitle}   />
         <Charges open={openModal==='Charges'} onClose={handleCloseModal} title={selectTitle}    /> 
         <Rentfrequency open={openModal==='Rent frequency & payment reminder'} onClose={handleCloseModal} title={selectTitle}  />
+        <ApplicationAgreement open={openModal==='Application agreement'} onClose={handleCloseModal} title={selectTitle} />
+         <AboutProperty  open={openModal==='About the property'} onClose={handleCloseModal} title={selectTitle} />
+        <AmenitiesSelector
+         open={openModal==='Community’s amenity/features'} 
+         onClose={handleCloseModal} 
+         title={selectTitle} />
+        <PetFees 
+         open={openModal==='Pet fees'} 
+         onClose={handleCloseModal} 
+         title={selectTitle} />
+         <Parking
+         open={openModal==='Parking'} 
+         onClose={handleCloseModal} 
+         title={selectTitle} />
+         <NearestEducational 
+          open={openModal==='Nearest educational institution'} 
+         onClose={handleCloseModal} 
+         title={selectTitle} />
+         <AddLandmark
+         open={openModal==='Nearest stations'} 
+         onClose={handleCloseModal} 
+         title={selectTitle} />
+         <UtilitiesProvider 
+         open = {openModal === 'Utilities provider'}
+         onClose={handleCloseModal} 
+         title={selectTitle} />
 
         {/* Footer Section  */}
         <footer className="p-5 flex justify-between items-center mt-20 mb-10">
