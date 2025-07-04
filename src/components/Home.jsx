@@ -11,6 +11,7 @@ import Landloard from '@/app/Landlord/page'
 import Realtor from '@/app/Realtor/page'
 import Property from '@/app/Property/page'
 import Footer from './Footer';
+import Navbar from './Navbar';
 
 const propertyTypes = [
  {
@@ -53,7 +54,10 @@ const Home = () => {
 
 
  const [selectedRole, setSelectedRole] = useState('');
+
  const router = useRouter();
+
+
  const renderComponent = () => {
   switch (selectedRole) {
    case 'Landlord':
@@ -71,6 +75,10 @@ const Home = () => {
  const [selectedPropertyType, setSelectedPropertyType] = useState('');
 
  return (
+  <>
+    <Navbar 
+     btn='Exit'
+     />
   <main className="max-h-screen  bg-white text-gray-900 
     page-wrapper py-10">
    <section className="space-y-10">
@@ -129,6 +137,8 @@ const Home = () => {
         </div>
        </div>
       ))}
+
+      
      </div>
     </div>
 
@@ -158,8 +168,8 @@ const Home = () => {
   btn = 'Get Started'
   isNextEnabled={selectedRole && selectedPropertyType}
   />
-
   </main>
+   </>
  );
 };
 

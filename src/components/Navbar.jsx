@@ -3,7 +3,7 @@ import React from 'react'
 import  Image  from 'next/image';
 import logo from '../../public/assests/logo.png'
 
-const Navbar = () => {
+const Navbar = ({btn}) => {
   return (
   <>
     <div className="navbar bg-base-100  page-wrapper">
@@ -19,7 +19,7 @@ const Navbar = () => {
 
       <div className="flex-none">
         <button className="btn btn-ghost outline-1 outline-neutral-500 px-4 py-2">
-          Exit
+         {btn}
         </button>
       </div>
     </div>
